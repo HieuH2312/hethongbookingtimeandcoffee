@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đặt chỗ Cafe</title>
+    <link rel="stylesheet" href="css/seats.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h2>CAFE BOOKING</h2>
+        <span>Hệ thống quản lý chỗ ngồi</span>
+    </header>
+
+
+    <!-- WRAPPER -->
+    <div class="wrapper">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Khu vực</h3>
+
+            <button class="floor-btn active" data-floor="1">
+                Tầng 1
+            </button>
+
+            <button class="floor-btn" data-floor="2">
+                Tầng 2
+            </button>
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="seat-content">
+
+            <!-- TIÊU ĐỀ -->
+            <section class="summary">
+                <h3 id="floor-title">Sơ đồ tầng 1</h3>
+                <p id="floor-summary">Danh sách bàn và phòng</p>
+            </section>
+
+
+            <!-- CHÚ THÍCH TRẠNG THÁI -->
+            <section class="legend">
+
+                <div>
+                    <span class="legend-color available"></span>
+                    <span>Bàn trống</span>
+                </div>
+
+                <div>
+                    <span class="legend-color waiting"></span>
+                    <span>Chờ check-in</span>
+                </div>
+
+                <div>
+                    <span class="legend-color occupied"></span>
+                    <span>Đang sử dụng</span>
+                </div>
+
+            </section>
+
+
+            <!-- KHU VỰC SƠ ĐỒ VÀ THÔNG TIN -->
+            <section class="booking-layout">
+
+                <!-- SƠ ĐỒ BÀN -->
+                <div class="seat-map" id="seat-map">
+
+                    <!-- BỐ CỤC TẦNG 1 -->
+                    <div class="floor-one-map">
+
+                        <!-- CỘT BÀN BÊN TRÁI -->
+                        <div class="seat-column left-column">
+                            <!-- JavaScript render bàn tại đây -->
+                        </div>
+
+
+                        <!-- BÀN LỚN Ở GIỮA -->
+                        <div class="center-seat">
+                            <!-- JavaScript render bàn lớn tại đây -->
+                        </div>
+
+
+                        <!-- CỘT BÀN BÊN PHẢI -->
+                        <div class="seat-column right-column">
+                            <!-- JavaScript render bàn tại đây -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THÔNG TIN BÀN -->
+                <aside class="seat-detail" id="seat-detail">
+
+                    <div class="detail-empty">
+                        <h3>Thông tin bàn</h3>
+                        <p>Vui lòng chọn một bàn để xem thông tin.</p>
+                    </div>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- TEMPLATE MẪU BÀN -->
+    <template id="seat-card-template">
+
+        <div class="seat-card">
+
+            <h4 class="seat-name"></h4>
+
+            <span class="seat-capacity"></span>
+
+            <small class="seat-status"></small>
+
+        </div>
+
+    </template>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Cafe Booking System</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/seats.js"></script>
+
+</body>
+
+</html>
